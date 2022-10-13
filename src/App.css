@@ -1,38 +1,122 @@
+* {
+
+  box-sizing: border-box;
+}
+
+:root {
+
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+
+html,
+body {
+
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  font-size: 1.75rem;
+  font-family: Manrope;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dark-Blue);
+}
+
 .App {
+  max-width: 20em;
+
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 5px;
+  padding: 1.5em;
+  color: var(--Light-Cyan);
+  position: relative;
+}
+
+.App p {
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App p:first-child {
+  font-size: 1rem;
+  color: hsl(150, 100%, 66%);
+  letter-spacing: .2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.button {
+  position: absolute;
+
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+
+  bottom: -2em;
+  background-color: var(--Neon-Green);
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: none;
+}
+
+.button:hover {
+
+  box-shadow: 0 0 25px var(--Neon-Green);
+  cursor: pointer;
+
+}
+
+.button img {
+  margin-top: .2em;
+
+}
+
+.dividermobile {
+
+  display: none;
+
+}
+
+.dividerdesktop {
+
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 545px) {
+
+  .App {
+
+    margin: 0 .5em;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  .dividerdesktop {
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+
+  .dividermobile {
+
+    max-width: 100%;
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
   }
+
+
 }
