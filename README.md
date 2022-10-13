@@ -40,5 +40,3 @@ Users should be able to:
 
 - React
 - Flexbox
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
